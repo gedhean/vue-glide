@@ -130,9 +130,9 @@ export default {
   render (h) {
     let control
     let bullet
-    let buttons = []
+    const buttons = []
     // Pass only vue-glide-slide
-    let slides = this.$slots.default.filter(
+    const slides = this.$slots.default.filter(
       c => {
         let isVueGlideTag = false
 
