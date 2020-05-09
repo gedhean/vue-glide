@@ -1,16 +1,23 @@
 <template>
   <div id="app">
     <h1>Workbench</h1>
-    <vue-glide class="demo" :bullet="true">
+    <vue-glide
+      class="demo"
+      :bullet="true"
+      :per-view="1"
+      :autoplay="2000"
+      hoverpuase
+      @glide:slide-click="log"
+    >
       <vue-glide-slide
         v-for="i in 10"
         :key="i">
         Slide {{ i }}
       </vue-glide-slide>
-      <!-- <template slot="control">
+      <template slot="control">
         <button data-glide-dir="<">prev</button>
         <button data-glide-dir=">">next</button>
-      </template> -->
+      </template>
     </vue-glide>
   </div>
 </template>
@@ -23,6 +30,11 @@ export default {
   components: {
     [VueGlide.name]: VueGlide,
     [VueGlideSlide.name]: VueGlideSlide
+  },
+  methods: {
+    log (...args) {
+      console.log(args)
+    }
   }
 }
 </script>
@@ -59,5 +71,8 @@ export default {
       }
     }
   }
+
+  max-width: 760px;
+  margin: 0 auto;
 }
 </style>
