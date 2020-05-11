@@ -13,5 +13,5 @@ then
   npm run build:lib
   npm version $VERSION -m "Release $VERSION"
   git push origin master
-  npm publish
+  npm publish --access public
 fi
