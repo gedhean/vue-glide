@@ -157,7 +157,8 @@ export default {
             key: i,
             attrs: {
               'data-glide-dir': '=' + i,
-              class: 'glide__bullet'
+              class: 'glide__bullet',
+              'aria-label': 'slide-' + i
             }
           })
         )
