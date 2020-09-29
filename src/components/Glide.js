@@ -153,7 +153,7 @@ export default {
     if (this.bullet) {
       for (let i = 0; i < this.slidesCount; i++) {
         buttons.push(
-          h('button', {
+          h('div', {
             key: i,
             attrs: {
               'data-glide-dir': '=' + i,
